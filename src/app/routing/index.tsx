@@ -1,6 +1,12 @@
+import { lazy } from 'react';
 import {createBrowserRouter} from 'react-router-dom';
-import { TodoListPage } from 'pages/todo-list-page';
 import MainLayout from 'shared/ui/main-layout';
+
+const TodoListPage = lazy(() =>
+  import('pages/todo-list-page').then(module => ({
+    default: module.TodoListPage,
+  }))
+);
 
 export const router = createBrowserRouter([
   {
