@@ -1,3 +1,3 @@
 export const TodoDetailsPage = () => {
-  return <div>TodoDetailsPage</div>;
+  return <div>Todo Detail Page</div>
 };
